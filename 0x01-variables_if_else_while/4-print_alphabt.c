@@ -12,7 +12,7 @@ int i;
 for (i = 0; i < 26; i++)
 {
 char current_char = 'a' + i;
-if (current_char != 'q' || current_char != 'e')
+if (current_char != 'q' && current_char != 'e')
 {
 putchar(current_char);
 }
