@@ -13,8 +13,6 @@ for (i = 0; i < 26; i++)
 {
 putchar('a' + i);
 }
-int i;
-
 for (i = 0; i < 26; i++)
 {
 putchar('A' + i);
