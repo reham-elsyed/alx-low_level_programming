@@ -13,10 +13,10 @@ for (i = 0; i < 26; i++)
 {
 putchar('a' + i);
 }
-int j;
-for (j = 0; j < 26; j++)
+int i;
+for (i = 0; i < 26; i++)
 {
-putchar('A' + j);
+putchar('A' + i);
 }
 
 putchar('\n');

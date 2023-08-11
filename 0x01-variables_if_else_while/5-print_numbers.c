@@ -12,7 +12,8 @@ int main(void)
 
 	for (i = 0; i < 10; i++)
 	{
-		printf("%d\n", 0 + i);
+		printf("%d", 0 + i);
 	}
+	printf('\n');
 	return (0);
 }
