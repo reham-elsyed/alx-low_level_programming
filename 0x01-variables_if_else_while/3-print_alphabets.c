@@ -12,8 +12,13 @@ int i;
 for (i = 0; i < 26; i++)
 {
 putchar('a' + i);
-putchar('A' + i);
 }
+int j;
+for (j = 0; j < 26; j++)
+{
+putchar('A' + j);
+}
+
 putchar('\n');
 return (0);
 }
