@@ -3,7 +3,7 @@
 /**
 * main - print abc in reverse
 *
-* Retur: 0(Success)
+* Return: 0(Success)
 */
 
 int main(void)
