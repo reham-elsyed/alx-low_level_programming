@@ -12,7 +12,7 @@ int i;
 
 for (i = 26; i < 26; i--)
 {
-putchar('z' + i);
+putchar('a' + i);
 }
 putchar('\n');
 return (0);
