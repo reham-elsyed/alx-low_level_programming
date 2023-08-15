@@ -23,9 +23,9 @@ _putchar(',');
 _putchar('.');
 _putchar('.');
 }
-j++
+j++;
 }
 putchar('\n');
-i++
+i++;
 }
 }
