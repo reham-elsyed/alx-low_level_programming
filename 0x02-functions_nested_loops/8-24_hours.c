@@ -20,7 +20,7 @@ _putchar((j / 10) + '0');
 _putchar((j % 10) + '0');
 _putchar('\n');
 j++;
-)
+}
 i++;
 }
 }
