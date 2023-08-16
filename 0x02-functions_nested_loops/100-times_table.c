@@ -23,11 +23,13 @@ if (result < 10 && j != 0)
 _putchar(',');
 _putchar(' ');
 _putchar(' ');
+_putchar(' ');
 _putchar('0' + result);
 }
 else if (result >= 10)
 {
 _putchar(',');
+_putchar(' ');
 _putchar(' ');
 _putchar('0' + result / 10);
 _putchar('0' + result % 10);
