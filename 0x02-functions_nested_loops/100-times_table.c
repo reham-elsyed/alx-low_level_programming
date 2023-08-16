@@ -18,23 +18,31 @@ if (j == 0)
 {
 _putchar('0' + result);
 }
-if (result < 10 && j != 0)
+else
 {
 _putchar(',');
 _putchar(' ');
+}
+if (result < 10 && j != 0)
+{
 _putchar(' ');
 _putchar(' ');
 _putchar('0' + result);
 }
-else if (result >= 10)
+else if (result < 100)
 {
-_putchar(',');
-_putchar(' ');
 _putchar(' ');
 _putchar('0' + result / 10);
 _putchar('0' + result % 10);
 }
+else
+{
+_putchar('0' + result / 100);
+_putchar('0' + (result / 10) % 10);
+_putchar('0' + result % 10);
 }
+}
+
 _putchar('\n');
 }
 }
