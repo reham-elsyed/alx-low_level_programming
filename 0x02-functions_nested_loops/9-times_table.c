@@ -17,6 +17,7 @@ int result = i *j;
 
 if (result < 10)
 {
+_putchar(' ');
 _putchar('0' + result);
 }
 else
