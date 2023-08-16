@@ -14,8 +14,11 @@ j = 0;
 while (j <= 9)
 {
 int result = i *j;
-
-if (result < 10)
+if (result == 0)
+{
+_putchar(result + '0');
+}
+if (result < 10 && result != 0))
 {
 _putchar(' ');
 _putchar('0' + result);
