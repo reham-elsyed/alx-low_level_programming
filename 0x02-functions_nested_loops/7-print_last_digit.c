@@ -13,6 +13,8 @@ if (n < 0)
 n = -n;
 }
 i = n % 10;
+if (i < 0)
+i = -a;
 _putchar('0' + i);
 return (i);
 }
