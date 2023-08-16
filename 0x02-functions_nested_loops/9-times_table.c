@@ -15,8 +15,15 @@ while (j <= 9)
 {
 int result = i *j;
 
+if (result < 10)
+{
+_putchar('0' + result);
+}
+else
+}
 _putchar('0' + result / 10);
 _putchar('0' + result % 10);
+}
 if (j != 9)
 {
 _putchar(',');
@@ -24,6 +31,7 @@ _putchar(' ');
 }
 j++;
 }
+_putchar('\n');
 i++;
 }
 }
