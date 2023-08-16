@@ -14,7 +14,7 @@ for (i = 0; i <= n; i++)
 {
 for (j = 0; j <= n; j++)
 {
- res = j * i;
+res = j * i;
 
 if (j == 0)
 {
@@ -43,9 +43,6 @@ _putchar(' ');
 _putchar((res / 100) + '0');
 _putchar(((res / 10) % 10) + '0');
 _putchar((res % 10) + '0');
-}
-}
+}}
 _putchar('\n');
-}
-}
-}
+}}}
