@@ -2,8 +2,9 @@
 
 /**
  * print_times_table - function to print time table with certain input
- * @n: input to the function
+ * @n: input to the fun
  */
+
 void print_times_table(int n)
 {
 int i, j;
@@ -23,7 +24,7 @@ else
 _putchar(',');
 _putchar(' ');
 }
-if (result < 10 && j != 0)
+if (result < 10)
 {
 _putchar(' ');
 _putchar(' ');
@@ -42,9 +43,6 @@ _putchar('0' + (result / 10) % 10);
 _putchar('0' + result % 10);
 }
 }
-
 _putchar('\n');
 }
 }
-
-
