@@ -14,24 +14,23 @@ j = 0;
 while (j <= 9)
 {
 int result = i *j;
-if (result == 0)
+if (j == 0)
 {
 _putchar(result + '0');
 }
-if (result < 10 && result != 0))
-{
-_putchar(' ');
-_putchar('0' + result);
-}
-else
-{
-_putchar('0' + result / 10);
-_putchar('0' + result % 10);
-}
-if (j != 9)
+if (result < 10 && j != 0)
 {
 _putchar(',');
 _putchar(' ');
+_putchar(' ');
+_putchar('0' + result);
+}
+else if (result >= 10)
+{
+_putchar(',');
+_putchar(' ');
+_putchar('0' + result / 10);
+_putchar('0' + result % 10);
 }
 j++;
 }
