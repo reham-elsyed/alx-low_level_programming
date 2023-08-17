@@ -1,7 +1,7 @@
 #include "main.h"
-
 /**
  * more_numbers - function that prints the numbers ten times
+ *
  */
 void more_numbers(void)
 {
