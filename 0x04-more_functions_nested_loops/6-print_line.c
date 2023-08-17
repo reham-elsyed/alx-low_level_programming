@@ -3,7 +3,6 @@
 /**
 * print_line - function to print a line
 * @n: input number
-* Return: 0
 */
 
 void print_line(int n)

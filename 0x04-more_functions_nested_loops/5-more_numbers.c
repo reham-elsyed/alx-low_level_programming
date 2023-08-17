@@ -2,7 +2,6 @@
 
 /**
  * more_numbers - function that prints the numbers ten times
- * Return: 0
  */
 void more_numbers(void)
 {
