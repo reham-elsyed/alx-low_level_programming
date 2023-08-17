@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- * print_line - function to print a line
- * @n: input number
- */
+* print_line - function to print a line
+* @n: input number
+* Return: 0
+*/
+
 void print_line(int n)
 {
 int i;
@@ -15,7 +17,8 @@ if (n <= 0)
 _putchar('\n');
 }
 else
-{_putchar('_');
+{
+_putchar('_');
 }
 }
 _putchar('\n);
