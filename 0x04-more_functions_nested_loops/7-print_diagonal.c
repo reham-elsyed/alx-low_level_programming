@@ -13,7 +13,7 @@ if (n <= 0)
 {
 _putchar('\n');
 }
-else if (n > 1)
+else if (n > 0)
 {
 for (j = 0; j < i; j++)
 {
