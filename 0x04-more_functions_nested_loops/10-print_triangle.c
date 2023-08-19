@@ -14,9 +14,16 @@ _putchar('\n');
 }
 for (i = 0; i < size; i++)
 {
-for (j = 0; j <= i; j++)
+for (j = 0; j < size; j++)
 {
+if (j < size - (i + 1))
+{
+_putchar(' ');
+}
+else
+{	
 _putchar('#');
+}
 }
 _putchar('\n');
 }
