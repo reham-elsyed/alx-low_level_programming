@@ -19,7 +19,7 @@ if (j < size - (i + 1))
 _putchar(' ');
 }
 else
-{	
+{
 _putchar('#');
 }
 }
