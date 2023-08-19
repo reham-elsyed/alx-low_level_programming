@@ -2,10 +2,10 @@
 
 /**
  * main - function print numbers from 1-100
- * replace 3multibles with fiss and 5multibles with buzz
  *
  * Return: 0 sucess
  */
+
 int main(void)
 {
 int i;
@@ -25,8 +25,10 @@ else if ((i % 5) == 0)
 printf("Buzz ");
 }
 else
-{printf("%d ", i);
+{
+printf("%d ", i);
 }
+printf("\n");
 }
 return (0);
 }
