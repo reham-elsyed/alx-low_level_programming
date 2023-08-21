@@ -1,1 +1,1 @@
-functions and nested loops
+pointers and arrays
