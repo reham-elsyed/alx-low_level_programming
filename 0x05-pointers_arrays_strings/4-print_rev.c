@@ -6,14 +6,12 @@
 */
 void print_rev(char *s)
 {
-int len = 0, i;
+int len, i;
 char temp;
 
-for (i = 0; s[i] != '\0'; i++)
-{
-len++;
-}
-for(i = 0; i < s[len / 2]; i++)
+for (len = 0; s[len] != '\0'; ++len)
+;
+for (i = 0; i < (len / 2); i++)
 {
 temp = s[i];
 s[i] = s[len - 1 - i];
