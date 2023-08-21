@@ -7,19 +7,16 @@
  */
 int _atoi(char *s)
 {
-int i= 0;
-int digit = 0;
-while (s[i] != '\0')
+unsigned int digit = 0;
+int sign = 1;
+while (*s++)
 {
-if (s[i] < 48 || s[i] > 57)
-{
-return (0);
+if (*s == '-')
+sign *= -1;
+else if (*s >= '0' && *s <= '9')
+digit = (digit *10) + (*s - '0');
+else if (digit > 0)
+break;
 }
-else
-{
-digit = digit * 10 + (s[i] - 48);
-i++;
-}
-}
-return (digit);
+return (digit * sign);
 }
