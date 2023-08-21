@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* print_rev - function  reverse string
+*rev_string - function  reverse string
 * @s: input pointer
 * Return: nothing
 */
@@ -18,4 +18,3 @@ s[i] = s[len - 1 - i];
 s[len - 1 - i] = temp;
 }
 }
-~                               
