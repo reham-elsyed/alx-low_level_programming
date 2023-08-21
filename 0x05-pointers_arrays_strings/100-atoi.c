@@ -14,7 +14,7 @@ while (*s++)
 if (*s == '-')
 sign *= -1;
 else if (*s >= '0' && *s <= '9')
-digit = (digit *10) + (*s - '0');
+digit = (digit * 10) + (*s - '0');
 else if (digit > 0)
 break;
 }
