@@ -19,5 +19,5 @@ else if (digit > 0)
 break;
 s++;
 }
-return (digit * sign);
+return (digit *sign);
 }
