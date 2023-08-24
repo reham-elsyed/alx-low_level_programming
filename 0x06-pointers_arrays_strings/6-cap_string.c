@@ -31,5 +31,5 @@ if (is_delimiter && str[i + 1] >= 'a' && str[i + 1] <= 'z')
 str[i + 1] = str[i + 1] - 32;
 }
 }
-return str;
+return (str);
 }
