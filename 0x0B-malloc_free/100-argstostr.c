@@ -26,7 +26,7 @@ char *s;
 
 if (ac == 0 || av == NULL)
 return (NULL);
-for (i = 0; i < ac, i++, nc++)
+for (i = 0; i < ac; i++, len++)
 len += _strlen(av[i]);
 s = malloc(sizeof(char) * len + 1);
 if (s == 0)
