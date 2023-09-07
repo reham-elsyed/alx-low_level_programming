@@ -42,7 +42,7 @@ for (i = 0; i < lens1; i++)
 {
 s[i] = s1[i];
 }
-for (j = 0; j <n && s2[j] != '\0'; j++)
+for (j = 0; j < n && s2[j] != '\0'; j++)
 {
 s[lens1 + j] = s2[j];
 }
