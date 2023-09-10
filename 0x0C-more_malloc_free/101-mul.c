@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <ctype.h>
 
 /**
  * isNumeric - function to check input if number
@@ -11,14 +12,14 @@ int isNumeric(char* str)
 {
 while (*str)
 {
-if (!(*str <= '0' || *str >= '9'))
+if (!(*str >= '0' && *str <= '9'))
 {
-return (1);
-break;
+printf("Error\n");
+exit(98);
 }
 str++;
 }
-return (0);
+return (1);
 }
 
 /**
@@ -96,14 +97,14 @@ char *str;
 if (argc != 3)
 {
 printf("Error\n");
-return (98);
+exit(98);
 }
 arg1 = argv[1];
 arg2 = argv[2];
 if (!isNumeric(arg1) || !isNumeric(arg2))
 {
 printf("Error\n");
-return (98);
+exit(98);
 }
 num1 = stringToIntger(arg1);
 num2 = stringToIntger(arg2);
