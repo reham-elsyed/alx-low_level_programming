@@ -16,5 +16,5 @@ if (s[i] == c)
 return (&(s[i]));
 }
 }
-return ('\0');
+return (NULL);
 }
