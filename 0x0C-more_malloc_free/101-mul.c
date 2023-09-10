@@ -2,13 +2,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
-
+#include <string.h>
 /**
  * isNumeric - function to check input if number
  * @str: input str
  * Return: 0 sucess
  */
-int isNumeric(char* str)
+int isNumeric(char *str)
 {
 while (*str)
 {
@@ -27,7 +27,7 @@ return (1);
  *@str: pointer to string
  *Return: result
  */
-int stringToIntger( char* str)
+int stringToIntger(char *str)
 {
 int result;
 
@@ -42,14 +42,14 @@ return (result);
 /**
  *multiply -function to multiplt nums
  *@num1: input num
- *@num1: input num
+ *@num2: input num
  *Return: multible
  */
 int multiply(int num1, int num2)
 {
 int mult;
 
-mult = num1 *num2;
+mult = num1 * num2;
 return (mult);
 }
 /**
@@ -57,7 +57,7 @@ return (mult);
  *@num: input int
  *Return: str
  */
-char* integerToString(int num)
+char *integerToString(int num)
 {
 int temp = num;
 int numDigits = 0;
@@ -69,8 +69,9 @@ while (temp != 0)
 temp /= 10;
 numDigits++;
 }
-str = (char*)malloc((numDigits + 1) * sizeof(char));
-if (str == NULL) {
+str = (char *)malloc((numDigits + 1) * sizeof(char));
+if (str == NULL)
+{
 return (NULL);
 }
 for (i = numDigits - 1; i >= 0; i--)
@@ -87,11 +88,11 @@ return (str);
  * @argv :inputstring of digits
  * Return: 0 sucess
  */
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 int i, num1, num2, result;
-char* arg1;
-char* arg2;
+char *arg1;
+char *arg2;
 char *str;
 
 if (argc != 3)
