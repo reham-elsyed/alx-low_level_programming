@@ -1,6 +1,5 @@
 #include "dog.h"
 #include <stdio.h>
-#include <stdlib.h>
 
 /**
  * print_dog - function to print dog info
@@ -15,10 +14,7 @@ if (d->name == NULL)
 printf("Name: (nil)\n");
 else
 printf("Name: %s\n", d->name);
-if (d->age == NULL)
-printf("Age:(nil)\n");
-else
-printf("Age: %d\n", d->age);
+printf("Age: %f\n", d->age);
 else if (d->owner == NULL)
 printf("Owner: (nil)\n");
 else
