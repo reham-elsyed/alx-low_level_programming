@@ -12,7 +12,7 @@ int _strlen(const char *s)
 if (s == NULL || *s == '\0')
 return (0);
 else
-return (1 + strlen(s + 1));
+return (1 + _strlen(s + 1));
 }
 /**
  * _strcpy -function to copy sting
@@ -29,7 +29,7 @@ for (i = 0; src[i] != '\0'; i++)
 {
 dest[i] = src[i];
 }
-dest[i] = '\0'
+dest[i] = '\0';
 return (dest);
 }
 
@@ -64,6 +64,6 @@ return (NULL);
 }
 pam->name = _strcpy((*pam).name, name);
 pam->age = age;
-pam->owner = _strcpy((*pam).owner, ownwer);
+pam->owner = _strcpy((*pam).owner, owner);
 return (pam);
 }
