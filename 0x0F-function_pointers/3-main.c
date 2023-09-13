@@ -1,14 +1,11 @@
 #include "3-calc.h"
 #include <stdio.h>
-#include <stdlib.h>
-
 /**
  * main - calculation
  * @argc: int arg
  * @argv: input array
  * Return: result int
 */
-
 int main(int argc, char *argv[])
 {
 int (*func)(int, int);
