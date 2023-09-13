@@ -21,7 +21,7 @@ int i;
 
 for (i = 0; ops[i].op != NULL; i++)
 {
-if (strcmp(s, ops[i].op) == 0)
+if (s && s[0] == ops[i].op[0] &&  !s[1])
 {
 return (ops[i].f);
 }
