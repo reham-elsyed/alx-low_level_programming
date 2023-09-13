@@ -37,7 +37,7 @@ return (a * b);
 */
 int op_div(int a, int b)
 {
-return ((b != 0) ? (a / b) : 0);
+return (a / b);
 }
 /**
  * op_mod - fun to % two nums
@@ -47,5 +47,5 @@ return ((b != 0) ? (a / b) : 0);
 */
 int op_mod(int a, int b)
 {
-return ((b != 0) ? (a % b) : 0);
+return (a %  b);
 }

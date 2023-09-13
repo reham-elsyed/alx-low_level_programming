@@ -31,8 +31,7 @@ exit(99);
 }
 if ((num2 == 0) && ((oprt[0] == '/') || (oprt[0] == '%')))
 {
-printf("Error\n");
-exit(100);
+printf("Error\n"), exit(100);
 }
 result = func(num1, num2);
 printf("%d\n", result);
