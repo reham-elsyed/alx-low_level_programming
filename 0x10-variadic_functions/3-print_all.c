@@ -1,10 +1,11 @@
 #include "variadic_functions.h"
 #include <stdio.h>
+#include <stdarg.h>
 
 /**
-* format_char - Format char
-* @separator: Separator string
-* @ap: Argument pointer
+*format_char - Format char
+*@separator: Sepaator string
+*@ap: Argument pinter
 */
 void format_char(char *separator, va_list ap)
 {
@@ -12,9 +13,9 @@ printf("%s%c", separator, va_arg(ap, int));
 }
 
 /**
-* format_int - Format int
-* @separator: Separator string
-* @ap: Argument pointer
+*format_int - Format int
+*@separator: Searator string
+*@ap: Argument pinter
 */
 void format_int(char *separator, va_list ap)
 {
@@ -22,9 +23,9 @@ printf("%s%d", separator, va_arg(ap, int));
 }
 
 /**
-* format_float - Format float
-* @separator: Separator string
-* @ap: Argument pointer
+*format_float - Format float
+*@separator: Separator string
+*@ap: Argument pointer
 */
 void format_float(char *separator, va_list ap)
 {
@@ -32,23 +33,24 @@ printf("%s%f", separator, va_arg(ap, double));
 }
 
 /**
-* format_string - Format string
-* @separator: Separator string
-* @ap: Argument pointer
+*format_string - Format string
+*@separator: Separator string
+*@ap: Argument pointer
 */
 void format_string(char *separator, va_list ap)
 {
 char *str = va_arg(ap, char *);
 
 if (str == NULL)
+{
 printf("%s(nil)", separator);
-else
+}
 printf("%s%s", separator, str);
 }
 
 /**
-* print_all - Print all
-* @format: The format string
+*print_all - Print all
+*@format: The format string
 */
 void print_all(const char * const format, ...)
 {
