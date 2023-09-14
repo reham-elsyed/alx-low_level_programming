@@ -52,7 +52,7 @@ printf("%s%s", separator, str);
 */
 void print_all(const char * const format, ...)
 {
-int n = 0, m = 0;
+int n = 0, m;
 char *separator = "";
 va_list ap;
 token_t tokens[] = {
