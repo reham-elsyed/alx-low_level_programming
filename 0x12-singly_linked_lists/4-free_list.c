@@ -19,4 +19,4 @@ void free_list(list_t *head)
 		free(node);
 		node = next_node;
 	}
-}	
+}
