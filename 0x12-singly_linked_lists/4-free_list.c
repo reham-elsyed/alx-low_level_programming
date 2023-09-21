@@ -2,7 +2,7 @@
 /**
  * free_list - gunction to free list
  * @head: input head of node
- * Return: number
+ * Return: nothing
  */
 void free_list(list_t *head)
 {
@@ -19,5 +19,4 @@ void free_list(list_t *head)
 		free(node);
 		node = next_node;
 	}
-}
-	
+}	
