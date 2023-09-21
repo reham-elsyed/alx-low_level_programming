@@ -2,12 +2,10 @@
 
 void _printfirst(void) __attribute__ ((constructor));
 /**
- * _printfirst - function to print line 
- * @head: input
- * @str: input string
+ * _printfirst - function to print line
  * Return: nothing
  */
-void _printf(void)
+void _printfirst(void)
 {
 printf("You're beat! and yet, you must allow,\n"
 		"I bore my house upon my back!\n");
