@@ -19,12 +19,12 @@ return (1 + _strlen(s + 1));
  */
 size_t print_list(const list_t *h)
 {
-	size_t i = 0;
+	size_t n = 0;
 
 	while (h)
-	{ printf("[%d] %s\n", _strlen(h->str), h->str ? h->str : "(nil)");
+	{ printf("[%d] %s\n", _strlen(h->str), h->str ? h->str : "[0] (nil)\n");
 		h = h->next;
-		i++;
+		n++;
 	}
-	return (i);
+	return (n);
 }
