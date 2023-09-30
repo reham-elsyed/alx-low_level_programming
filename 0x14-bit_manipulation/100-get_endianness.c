@@ -6,5 +6,5 @@
  */
 int get_endianness(void)
 {
-return (__BYTE_ORDER == __LITTLE_ENDIAN) ? 1 : 0;
+return ((__BYTE_ORDER == __LITTLE_ENDIAN) ? 1 : 0);
 }
