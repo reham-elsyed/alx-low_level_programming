@@ -14,7 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!filename || !letters)
 		return (0);
 	fp = open(filename, O_RDONLY);
-	if (fb == -1)
+	if (fp == -1)
 		return (0);
 	byts = read(fp, &buf[0], letters);
 	byts = write(STDOUT_FILENO, &buf[0], byts);
