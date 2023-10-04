@@ -32,10 +32,14 @@ dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 exit(98);
 }
 fp2 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0644);
-bytes = read(fp1, buf, sizeof(buf));
-while (bytes > 0)
+ if (fp2 == -1)
 {
-if (write(fp2, buf, bytes) == -1 || fp2 == -1)
+	dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
+	exit(99);
+}
+while ((bytes = read(fp1, buf, sizeof(buf))) > 0)
+{
+if (write(fp2, buf, bytes) == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file_to);
 exit(99);
