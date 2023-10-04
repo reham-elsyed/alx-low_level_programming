@@ -49,7 +49,7 @@ exit(98);
 }
 if (close(fp1) == -1 || close(fp2) == -1)
 {
-dprintf(STDERR_FILENO, "Error: Can't close fd");
+dprintf(STDERR_FILENO, "Error: Can't close fd ");
 exit(100);
 }
 return (0);
