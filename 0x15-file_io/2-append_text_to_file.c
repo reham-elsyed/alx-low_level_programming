@@ -1,40 +1,27 @@
 #include "main.h"
 
 /**
- * _strlen - function returns length of string
- * @c: string input
- * Return: intger
- */
-int _strlen(char *c)
-{
-int i = 0;
-
-if (!c)
-return (0);
-while (*c++)
-i++;
-return (i);
-}
-
-/**
- * append_text_to_file - function to append text to file
- * @filename: input filename
- * @text_content: input content
- * Return: 1 in success
+ * append_text_to_file - Appendstext at-end of-file.
+ * @filename: A pointer to name offile.
+ * @text_content: The strng add to end of the file.
+ * Return:function fails-filename is NULL - -1.
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int fd;
-	ssize_t bytes = 0;
-	ssize_t ln = _strlen(text_content);
+int opn, writ, ln = 0;
 
-	if (!filename)
-		return (-1);
-	fd = open(filename, O_WRONLY, O_APPEND);
-	if (fd == -1)
-		return (-1);
-	if (ln)
-		bytes = write(fd, text_content, ln);
-	close(fd);
-	return (bytes == ln ? 1 : -1);
+if (filename == NULL)
+return (-1);
+
+if (text_content != NULL)
+{
+for (ln = 0; text_content[ln];)
+ln++;
+}
+opn = open(filename, O_WRONLY | O_APPEND);
+writ = write(o, text_content, ln);
+if (opn == -1 || writ == -1)
+return (-1);
+close(opn);
+return (1);
 }
