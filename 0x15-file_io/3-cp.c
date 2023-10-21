@@ -65,8 +65,7 @@ src = open(argv[1], O_RDONLY);
 r = read(src, buffer, 1024);
 dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-do
-{
+do {
 if (src == -1 || r == -1)
 {
 dprintf(STDERR_FILENO,
@@ -84,8 +83,7 @@ exit(99);
 }
 r = read(src, buffer, 1024);
 dest = open(argv[2], O_WRONLY | O_APPEND);
-}
-while (r > 0);
+} while (r > 0);
 free(buffer);
 close_file(src);
 close_file(dest);
