@@ -1,56 +1,93 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <fcntl.h>
-#define READ_BUF_SIZE 1024
+#include "main.h"
+
+char *create_buff(char *f);
+void close_file(int fd);
 
 /**
- *main - function to copy file int a nother one
- *@ac: number of input
- *@argv: input string
- *Return: 0 if success
+ * close_file - Closs f descriptrs.
+ * @fd: The f dscriptor to be closd.
+ * return: void
  */
-int main(int ac, char *argv[])
+void close_file(int fd)
 {
-	int fp1, fp2;
-	ssize_t bytes;
-	char buf[READ_BUF_SIZE];
+int m;
 
-if (ac != 3)
+m = close(fd);
+
+if (m == -1)
 {
-dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", argv[0]);
-exit(97);
-}
-fp1 = open(argv[1], O_RDONLY);
-if (fp1 == -1)
-{
-dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-exit(98);
-}
-fp2 = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0644);
-if (fp2 == -1)
-{
-dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
-exit(99);
-}
-bytes = read(fp1, buf, sizeof(buf));
-while (bytes > 0)
-{
-if (write(fp2, buf, bytes) == -1)
-{
-dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
-exit(99);
-}
-}
-if (bytes == -1)
-{
-dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-exit(98);
-}
-if (close(fp1) == -1 || close(fp2) == -1)
-{
-dprintf(STDERR_FILENO, "Error: Can't close fd ");
+dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 exit(100);
 }
+}
+
+/**
+ * create_buff - Allocates 1024 bytes for a buffer.
+ * @f: The name of the f buffer is storing chars for.
+ *
+ * Return: A pointer to the newly-allocated buffer.
+ */
+char *create_buff(char *f)
+{
+char *buff;
+
+buff = malloc(sizeof(char) * 1024);
+if (buff == NULL)
+{
+dprintf(STDERR_FILENO,
+"Error: Can't write to %s\n", f);
+exit(99);
+}
+return (buff);
+}
+
+/**
+ * main - Copies the contents of a f to another f.
+ * @argc: The number of arguments supplied to the program.
+ * @argv: An array of pointers to the arguments.
+ * Return: 0 on success
+ */
+int main(int argc, char *argv[])
+{
+	int src, dest, r, w;
+	char *buffer;
+
+if (argc != 3)
+{
+dprintf(STDERR_FILENO, "Usage: cp f_src f_dest\n");
+exit(97);
+}
+buffer = create_buff(argv[2]);
+src = open(argv[1], O_RDONLY);
+r = read(src, buffer, 1024);
+dest = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+
+do
+{
+if (src == -1 || r == -1)
+{
+dprintf(STDERR_FILENO,
+"Error: Can't read src f %s\n", argv[1]);
+free(buffer);
+exit(98);
+}
+w = write(dest, buffer, r);
+if (dest == -1 || w == -1)
+{
+dprintf(STDERR_FILENO,
+"Error: Can't write to dest %s\n", argv[2]);
+free(buffer);
+exit(99);
+}
+r = read(src, buffer, 1024);
+dest = open(argv[2], O_WRONLY | O_APPEND);
+}
+while (r > 0);
+free(buffer);
+close_file(src);
+close_file(dest);
 return (0);
 }
