@@ -5,7 +5,7 @@
  *@index: input index
  *Retun: 1
  */
-int set_bit(unsigned long int n, unsigned int index)
+int set_bit(unsigned long int *n, unsigned int index)
 {
 if (index > 63)
 {
