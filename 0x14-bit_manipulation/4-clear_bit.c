@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *clear_bit - function to return value at certain index
+ *clear_bit - function to set index value to 0in index
  *@n: input number
  *@index: input index
  *Return: 1
@@ -11,6 +11,6 @@ if (index > 63)
 {
 return (-1);
 }
-*n = (~(1UL << index) | *n);
+*n = (~(1UL << index) & *n);
 return (1);
 }
