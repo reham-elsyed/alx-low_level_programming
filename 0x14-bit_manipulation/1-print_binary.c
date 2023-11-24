@@ -17,7 +17,7 @@ void print_binary(unsigned long int n)
 		if (bit)
 		{
 			_putchar('1');
-			count ++;
+			count++;
 		}
 		else if (count)
 		{
@@ -29,4 +29,3 @@ void print_binary(unsigned long int n)
 		_putchar('0');
 	}
 }
-
