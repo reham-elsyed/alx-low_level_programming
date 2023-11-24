@@ -3,7 +3,7 @@
  *set_bit - function to return value at certain index
  *@n: input number
  *@index: input index
- *Retun: 1
+ *Return: 1
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
