@@ -21,7 +21,7 @@ int _strlen(char *c)
  * Return: 0 in succecsss
  */
 
-ssize_t read_textfile(const char *filename, char *text_content)
+int creat_file(const char *filename, char *text_content)
 {
         int pd;
         ssize_t numbytes = 0;
