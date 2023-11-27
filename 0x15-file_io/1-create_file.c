@@ -15,13 +15,13 @@ int _strlen(char *c)
 }
 
 /**
- * creat_file -function reads text file and prints it
+ * create_file -function reads text file and prints it
  * @filename: input file
  * @text_content: input letters
  * Return: 0 in succecsss
  */
 
-int creat_file(const char *filename, char *text_content)
+int create_file(const char *filename, char *text_content)
 {
         int pd;
         ssize_t numbytes = 0;
