@@ -25,7 +25,7 @@ int creat_file(const char *filename, char *text_content)
 {
         int pd;
         ssize_t numbytes = 0;
-        ssize_t len = _strlen(text_content)
+        ssize_t len = _strlen(text_content);
 
         if (!filename)
 		return (-1);
