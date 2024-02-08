@@ -1,6 +1,6 @@
 #include "hash_tables.h"
 #include <stdlib.h>
-/*
+/**
  *shash_table_create - function to create hash table
  *@size: input size
  *Return: hash table
@@ -8,8 +8,8 @@
 shash_table_t *shash_table_create(unsigned long int size)
 {
 	shash_table_t *ht;
-	ht = malloc(sizeof(shash_table_t));
 
+	ht = malloc(sizeof(shash_table_t));
 	if (ht == NULL)
 	{
 		return (NULL);
@@ -43,18 +43,18 @@ shash_node_t *hash_create_node(const char *key, const char *value)
 		return (NULL);
 	}
 	new_node->key = strdup(key);
-	 if (!new_node->key)
+	if (!new_node->key)
 	{
 		free(new_node);
 		return (NULL);
 	}
-	 new_node->value = strdup(value);
-	 if (!new_node->value)
-	 {
-		 free(new_node->key);
-		 free(new_node);
-		 return (NULL);
-	 }
+	new_node->value = strdup(value);
+	if (!new_node->value)
+	{
+		free(new_node->key);
+		free(new_node);
+		return (NULL);
+	}
 	 new_node->next = new_node->snext = new_node->sprev = NULL;
 	return (new_node);
 }
@@ -64,7 +64,7 @@ shash_node_t *hash_create_node(const char *key, const char *value)
  *@node: node
  *Return: void
  */
-void add_to_sorted_list(shash_table_t *ht,shash_node_t *node)
+void add_to_sorted_list(shash_table_t *ht, shash_node_t *node)
 {
 shash_node_t *temp;
 
@@ -87,7 +87,7 @@ while (temp != NULL)
 			ht->shead = node;
 		return;
 	}
-	temp =temp->snext;
+	temp = temp->snext;
 }
 node->sprev = ht->stail;
 ht->stail->snext = node;
@@ -100,7 +100,6 @@ ht->stail = node;
  *@value: value
  *Return: 1 on success
  */
-		
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int index;
@@ -125,7 +124,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		temp = temp->next;
 	}
 	new_node = hash_create_node(key, value);
-	if (new_node ==NULL)
+	if (new_node == NULL)
 	{
 		return (0);
 	}
@@ -174,7 +173,7 @@ if (!ht || ht->shead == NULL)
 	return;
 temp = ht->shead;
 printf("{");
-while(temp != NULL)
+while (temp != NULL)
 {
 	if (flag == 1)
 		printf(", ");
@@ -185,10 +184,9 @@ while(temp != NULL)
 printf("}\n");
 }
 /**
- *
- *
- *
- *
+ *shash_table_print_rev -function to print rev
+ *@ht: input array
+ *Return: void
  */
 void shash_table_print_rev(const shash_table_t *ht)
 {
@@ -212,11 +210,9 @@ void shash_table_print_rev(const shash_table_t *ht)
 	printf("}\n");
 }
 /**
- *
- *
- *
- *
- *
+ *shash_table_delete - function to delete array
+ *@ht: array input
+ *Return:void
  */
 void shash_table_delete(shash_table_t *ht)
 {
@@ -228,7 +224,7 @@ void shash_table_delete(shash_table_t *ht)
 	{
 		return;
 	}
-	
+
 	for (i = 0; i < ht->size; i++)
 	{
 	temp = ht->array[i];
@@ -243,20 +239,4 @@ void shash_table_delete(shash_table_t *ht)
 	}
 	free(ht->array);
 	free(ht);
-	printf("deleted\n");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
