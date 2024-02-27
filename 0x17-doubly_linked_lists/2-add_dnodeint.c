@@ -3,7 +3,7 @@
 /**
  *add_dnodeint - function to add node
  *@head: pointer input of head node
- *@n input of n adta
+ *@n: input of n adta
  *Return: add of new element
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
