@@ -4,7 +4,7 @@
  * add_dnodeint_end- function to add node to the end of the linked list
  * @head: pointer to head pointer
  * @n: input data to node
- * @Return: newnode
+ * Return: newnode
  */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 {
